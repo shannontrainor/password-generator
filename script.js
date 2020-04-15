@@ -3,7 +3,6 @@
 // array of special characters
 // array of numbers
 
-//CHECK RANDOM NUMBER GENERATION JAVASCRIPT CHEAT SHEET -- GITLAB
 
 // Array of special characters to be included in password
 var specialCharacters = ['@', '%', '+', '\\', '/', "'", '!', '#', '$', '^', '?', ':', ',', ')', '(', '}', '{', ']', '[', '~', '-', '_', '.'];
