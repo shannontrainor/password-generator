@@ -42,7 +42,21 @@ function generatePasswordOptions() {
     return
   }
 
+  // variable storing response yes or no to spec char
+  var specialChar = confirm("Click ok to include special characters")
 
+  // variable storing response yes or no to numeric numbers
+  var numericChar = confirm("Click ok to include numeric numbers")
+
+  // variable storing response yes or no to lowercase letters
+  var lowercase = confirm("Click ok to include lowercase letters")
+
+  // variable storing response yes or no to uppercase letters
+  var uppercase = confirm("Click ok to include uppercase letters")
+
+  var charSet = "";
+
+  console.log(specialChar, numericChar, lowercase, uppercase)
 
 
 
