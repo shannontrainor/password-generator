@@ -9,24 +9,24 @@ var uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', '
 
 function generatePassword() {
   //variable to store length of pw
-  var length = prompt("How many characters would you like your password to be?")
+  var length = prompt("How many characters would you like your password to be?");
   console.log(length)
 
   //conditional statement checking if length is number
   if (isNaN(length) === true) {
-    alert("Password length must be a number")
+    alert("Password length must be a number");
     return
   }
 
   //check if input is less than 8
   if (length < 8) {
-    alert("Password must be at least 8 characters")
+    alert("Password must be at least 8 characters");
     return
   }
 
   //check if input is more than 128
   if (length > 128) {
-    alert("Password can be no more than 128 characters")
+    alert("Password can be no more than 128 characters");
     return
   }
 
@@ -39,7 +39,7 @@ function generatePassword() {
   //if statement checking user entered at least one character type
   if (
     specialChar === false &&
-    numericChar === false &&
+    numericNum === false &&
     lowercase === false &&
     uppercase === false
   ) {
@@ -51,10 +51,41 @@ function generatePassword() {
   var passwordOptions = {
     passwordlength: length,
     includesSpecial: specialChar,
-    includesNumeric: numericChar,
+    includesNumeric: numericNum,
     includesLowercase: lowercase,
     includesUppercase: uppercase,
   }
   return passwordOptions;
 }
+//function to select random array
+function getRandom(array) {
+  var randomIndex = Math.floor(Math.random() * array.length);
+  var randomElement = array[randomIndex];
+  return randomElement;
+}
+//function to set options for password
+function generatePassword() {
+  var options = generatePasswordOptions()
+  console.log("this is the object that was returned", options);
 
+  var result = []      //array storing password as it is built
+  var possibleChar = []  //array storing types of characters to include in pw
+  var guaranteeChar = []  //array storing one of each chosen character
+
+  if (options.includesSpecial) {
+    possibleChar = possibleChar.concat(specialCharacters);   //will give new value to possibleChar
+    guaranteeChar.push(getRandom(specialCharacters));  //will provide random character
+    console.log("possible", possibleChar);
+    console.log("guarantee", guaranteeChar);
+  }
+
+  if (options.includesNumeric) {
+    possibleChar = possibleChar.concat(numericNumbers); // will give new value to possibleChar
+    guaranteeChar.push(getRandom(numericNumbers));  // will provide random number
+    console.log("possible", possibleChar);
+    console.log("guarantee", guaranteeChar);
+  }
+
+
+
+}
