@@ -36,3 +36,4 @@ function generatePassword() {
   var numericNum = confirm("Click ok to include numeric numbers");
   var lowercase = confirm("Click ok to include lowercase letters");
   var uppercase = confirm("Click ok to include uppercase letters");
+}
