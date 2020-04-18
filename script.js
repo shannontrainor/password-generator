@@ -1,3 +1,5 @@
+//HOMEWORK
+
 //Array of special characters, numbers, lowercase, uppercase
 
 var specialCharacters = ['~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', '{', ']', ':', ';', '<', ',', '>', ".", '?', '/']
@@ -36,4 +38,18 @@ function generatePassword() {
   var numericNum = confirm("Click ok to include numeric numbers");
   var lowercase = confirm("Click ok to include lowercase letters");
   var uppercase = confirm("Click ok to include uppercase letters");
+
+  //if statement checking user entered at least one character type
+  if (
+    specialChar === false &&
+    numericChar === false &&
+    lowercase === false &&
+    uppercase === false
+  ) {
+    alert("You must select at least one character type");
+    return
+  }
+
+
 }
+
