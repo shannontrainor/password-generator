@@ -12,22 +12,19 @@ function generatePassword() {
   var length = prompt("How many characters would you like your password to be?")
   console.log(length)
 
-  //conditional statement checking is length is number
+  //conditional statement checking if length is number
   if (isNaN(length) === true) {
     alert("Password length must be a number")
     return
   }
 
-  //conditional statement checking is length is number
-  if (isNaN(length) === true) {
-    alert("Password length must be a number")
-    return
-  }
-
+  //check if input is less than 8
   if (length < 8) {
     alert("Password must be at least 8 characters")
     return
   }
+
+  //check if input is more than 128
   if (length > 128) {
     alert("Password can be no more than 128 characters")
     return
@@ -50,6 +47,14 @@ function generatePassword() {
     return
   }
 
-
+  //object with keys storing user response
+  var passwordOptions = {
+    passwordlength: length,
+    includesSpecial: specialChar,
+    includesNumeric: numericChar,
+    includesLowercase: lowercase,
+    includesUppercase: uppercase,
+  }
+  return passwordOptions;
 }
 
