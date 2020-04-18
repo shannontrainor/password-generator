@@ -100,5 +100,10 @@ function generatePassword() {
     console.log("guarantee", guaranteeChar);
   }
 
-
+  for (var i = 0; i < options.passwordlength; i++) {
+    var possibleCharacter = getRandom(possibleChar);
+    console.log("random characters", possibleChar);
+    result.push(possibleChar)     // will push into array
+  }
+  console.log(result)  // will log result of input
 }
