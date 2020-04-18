@@ -6,53 +6,33 @@ var lowercaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', '
 var uppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 function generatePassword() {
-    //variable to store length of pw
-    var length = prompt("How many characters would you like your password to be?")
-    console.log(length)
+  //variable to store length of pw
+  var length = prompt("How many characters would you like your password to be?")
+  console.log(length)
 
-    //conditional statement checking is length is number
-    if (isNaN(length) === true) {
-        alert("Password length must be a number")
-        return
-    }
+  //conditional statement checking is length is number
+  if (isNaN(length) === true) {
+    alert("Password length must be a number")
+    return
+  }
 
+  //conditional statement checking is length is number
+  if (isNaN(length) === true) {
+    alert("Password length must be a number")
+    return
+  }
 
-  // conditional statement to check if length is less than 8
   if (length < 8) {
     alert("Password must be at least 8 characters")
     return
   }
-
-  //conditional statement to check if length is more than 128
   if (length > 128) {
-    alert("Password must be no more than 128 characters")
+    alert("Password can be no more than 128 characters")
     return
   }
 
-  // variable storing response yes or no to spec char
-  var specialChar = confirm("Click ok to include special characters")
-
-  // variable storing response yes or no to numeric numbers
-  var numericChar = confirm("Click ok to include numeric numbers")
-
-  // variable storing response yes or no to lowercase letters
-  var lowercase = confirm("Click ok to include lowercase letters")
-
-  // variable storing response yes or no to uppercase letters
-  var uppercase = confirm("Click ok to include uppercase letters")
-
-  var charSet = "";
-
-  console.log(specialChar, numericChar, lowercase, uppercase)
-
-
-
-
-
-
-
-
-
-
-
-}
+  //variables to store user responses
+  var specialChar = confirm("Click ok to include special characters");
+  var numericNum = confirm("Click ok to include numeric numbers");
+  var lowercase = confirm("Click ok to include lowercase letters");
+  var uppercase = confirm("Click ok to include uppercase letters");
