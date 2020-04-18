@@ -66,7 +66,7 @@ function getRandom(array) {
 //function to set options for password
 function generatePassword() {
   var options = generatePasswordOptions()
-  console.log("this is the object that was returned", options);
+  console.log("generated", options);
 
   var result = []      //array storing password as it is built
   var possibleChar = []  //array storing types of characters to include in pw
@@ -86,6 +86,19 @@ function generatePassword() {
     console.log("guarantee", guaranteeChar);
   }
 
+  if (options.includesLowercase) {
+    possibleChar = possibleChar.concat(lowercaseLetters); //will give new value to possibleChar
+    guaranteeChar.push(getRandom(lowercaseLetters)); //will get random lowercase letters
+    console.log("possible", possibleChar);
+    console.log("guarantee", guaranteeChar);
+  }
+
+  if (options.includesUppercase) {
+    possibleChar = possibleChar.concat(uppercaseLetters); //will give new value to possibleChar
+    guaranteeChar.push(getRandom(uppercaseLetters));  //will get random uppercase letters
+    console.log("possible", possibleChar);
+    console.log("guarantee", guaranteeChar);
+  }
 
 
 }
