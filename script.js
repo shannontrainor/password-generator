@@ -115,7 +115,9 @@ function writePassword() {
   //console.log("working")
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  var response = passwordText.result;
 
+  passwordText.textContent = response;
   passwordText.value = password;
 }
 
