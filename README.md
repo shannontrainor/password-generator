@@ -5,6 +5,6 @@ This application is able to generate a random password containing a variety of l
 
 ### Useage
 Here you can find a look at some of the prompts presented while generating a random password. 
-![](Assets/generator-length.jpg)
-![](Assets/generator-specialChar.jpg)
-![](Assets/generator-lowercase.jpg)
+![](Assets/length.png)
+![](Assets/lowercase.png)
+![](Assets/special.png)
