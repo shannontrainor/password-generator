@@ -103,9 +103,9 @@ function generatePassword() {
   for (var i = 0; i < options.passwordlength; i++) {
     var possibleCharacter = getRandom(possibleChar);
     console.log("random characters", possibleCharacter);
-    result.push(possibleChar)     // will push into array
+    result.push(possibleCharacter)     // will push into array
   }
-  console.log(result)  // will log result of input
+  return result.join("");  // will log result of input, puts array into strring & takes out seperation
 }
 
 var generateBtn = document.querySelector("#generate");
@@ -119,6 +119,7 @@ function writePassword() {
 
   passwordText.textContent = response;
   passwordText.value = password;
+
 }
 
 // Add event listener to generate button
