@@ -106,6 +106,7 @@ function generatePassword() {
     result.push(possibleCharacter)     // will push into array
   }
   return result.join("");  // will log result of input, puts array into strring & takes out seperation
+
 }
 
 var generateBtn = document.querySelector("#generate");
